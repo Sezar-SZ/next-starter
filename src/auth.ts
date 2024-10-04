@@ -5,6 +5,7 @@ import { cache } from "react";
 import adapter from "./db/lucia-adapter";
 import { type Session } from "./db/schema/sessions";
 import { type User } from "./db/schema/users";
+import { env } from "./env";
 
 export const lucia = new Lucia(adapter, {
   sessionCookie: {
@@ -12,7 +13,7 @@ export const lucia = new Lucia(adapter, {
     // since Next.js doesn't allow Lucia to extend cookie expiration when rendering pages
     expires: false,
     attributes: {
-      secure: process.env.NODE_ENV === "production",
+      secure: env.NODE_ENV === "production",
     },
   },
   getUserAttributes: (attributes) => {

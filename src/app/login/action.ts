@@ -20,8 +20,6 @@ export async function login(_: any, formData: FormData) {
 
   const parsedData = loginSchema.safeParse({ email, password });
 
-  await new Promise((resolve) => setTimeout(resolve, 1000));
-
   if (!parsedData.success) {
     return {
       error: "Incorrect email or password",
