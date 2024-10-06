@@ -7,7 +7,8 @@ This is a template project for building fullstack applications using Next.js, wi
 - Authentication implemented With Lucia
 - Role-based Route protection
 - Drizzle ORM integration
-- Env Parsing
+- Using Drizzle-Zod to Create Schemas based on the tables
+- Parsing Environment Variables with Zod
 - Styling with TailwindCSS
 - Dark-mode with next-themes
 - Zustand
