@@ -1,5 +1,5 @@
 {
-  "id": "51f9655b-7e7a-4ad0-824d-4f5640deb10d",
+  "id": "0ca91d20-4089-4e24-a570-66c92c2760cb",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
@@ -62,8 +62,8 @@
           "primaryKey": false,
           "notNull": true
         },
-        "password": {
-          "name": "password",
+        "passwordHash": {
+          "name": "passwordHash",
           "type": "text",
           "primaryKey": false,
           "notNull": true

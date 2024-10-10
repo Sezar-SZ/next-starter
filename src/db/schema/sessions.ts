@@ -3,7 +3,7 @@ import { pgTable, text, timestamp } from "drizzle-orm/pg-core";
 import users from "./users";
 
 const sessions = pgTable("session", {
-  id: text("id").primaryKey(),
+  id: text().primaryKey(),
   userId: text("user_id")
     .notNull()
     .references(() => users.id),

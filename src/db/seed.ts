@@ -20,7 +20,7 @@ async function seedAdminUser() {
       .values({
         id: generateIdFromEntropySize(10),
         email: adminEmail,
-        password_hash: hashedPassword,
+        passwordHash: hashedPassword,
         role: "admin",
       })
       .execute();

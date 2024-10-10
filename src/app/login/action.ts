@@ -36,7 +36,7 @@ export async function login(_: any, formData: FormData) {
     };
   }
 
-  const validPassword = await verify(existingUser.password_hash, password);
+  const validPassword = await verify(existingUser.passwordHash, password);
 
   if (!validPassword) {
     return {

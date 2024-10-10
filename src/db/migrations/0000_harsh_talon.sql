@@ -13,7 +13,7 @@ CREATE TABLE IF NOT EXISTS "session" (
 CREATE TABLE IF NOT EXISTS "user" (
 	"id" text PRIMARY KEY NOT NULL,
 	"email" text NOT NULL,
-	"password" text NOT NULL,
+	"passwordHash" text NOT NULL,
 	"role" "role" DEFAULT 'user' NOT NULL,
 	"created_at" date DEFAULT now() NOT NULL,
 	CONSTRAINT "user_email_unique" UNIQUE("email")

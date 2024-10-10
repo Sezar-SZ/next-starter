@@ -14,7 +14,7 @@ import { insertUserSchema } from "~/db/schema/users";
 export interface UserRegisterError {
   id?: string[] | undefined;
   email?: string[] | undefined;
-  password_hash?: string[] | undefined;
+  passwordHash?: string[] | undefined;
   password?: string[] | undefined;
 }
 
@@ -50,7 +50,7 @@ export async function register(
   const user = insertUserSchema.safeParse({
     id: userId,
     email,
-    password_hash: passwordHash,
+    passwordHash,
   });
 
   if (!user.success) {
@@ -63,7 +63,7 @@ export async function register(
     await db.insert(users).values({
       id: userId,
       email: email as string,
-      password_hash: passwordHash,
+      passwordHash,
       role: "user",
     });
 
